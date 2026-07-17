@@ -7,8 +7,6 @@ This project implements a basic **AMBA AHB (Advanced High-performance Bus)** pro
 
 The purpose of this project is to understand the fundamentals of AHB bus transactions, including address phase, data phase, read/write operations, and master-slave handshaking.
 
----
-
 ## Features
 
 - Single AHB Master
@@ -22,31 +20,4 @@ The purpose of this project is to understand the fundamentals of AHB bus transac
 - Simulation Testbench
 - Fully synthesizable SystemVerilog design
 
----
 
-## AHB Protocol Overview
-
-AHB is a high-performance on-chip communication protocol developed by ARM as part of the AMBA family. It follows a master-slave architecture where the master initiates transactions and the slave responds.
-
-Each transfer consists of:
-
-### 1. Address Phase
-The master provides:
-- Address (`HADDR`)
-- Transfer type (`HTRANS`)
-- Read/Write control (`HWRITE`)
-
-### 2. Data Phase
-For write operations:
-- Master sends data through `HWDATA`
-
-For read operations:
-- Slave returns data through `HRDATA`
-
-The slave uses:
-- `HREADY` to indicate transfer completion
-- `HRESP` to indicate transfer status
-
----
-
-## Project Structure
